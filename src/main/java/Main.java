@@ -28,7 +28,7 @@ public class Main {
 
                 OutputStream clientOutput = client.getOutputStream();
                 clientOutput.write(("HTTP/1.2 \r\n" + "200 Ok").getBytes());
-                clientOutput.write(("Content-Type: text/plain\r\n").getBytes());
+                clientOutput.write(("Content-Type: text/html\r\n").getBytes());
                 clientOutput.write("\r\n".getBytes());
                 clientOutput.write("ok".getBytes());
                 clientOutput.write("\r\n\r\n".getBytes());
@@ -37,8 +37,8 @@ public class Main {
 
                 client = serverSocket.accept();
             }
-        }catch (Exception ex){
-            ex.printStackTrace();
+        }catch(IOException ioex){
+            ioex.printStackTrace();
         }
     }
 
