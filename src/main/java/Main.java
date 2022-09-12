@@ -10,13 +10,13 @@ import java.util.concurrent.Executors;
 
 public class Main {
 
-    static Boolean ASICS = true;
+    static Boolean OLYMPIC = true;
 
     public static void main( String[] args ) throws Exception {
         try{
             ServerSocket serverSocket = new ServerSocket(7001);
-            while(ASICS) {
-                
+            while(OLYMPIC) {
+
                 Socket client = serverSocket.accept();
                 BufferedReader br = new BufferedReader(new InputStreamReader(client.getInputStream()));
 
