@@ -28,7 +28,7 @@ public class Main {
 
                 OutputStream clientOutput = client.getOutputStream();
                 clientOutput.write(("HTTP/1.2 \r\n" + "200 Ok").getBytes());
-                clientOutput.write(("Content-Type: " + guessContentType(getFilePath("index.html")) + "\r\n").getBytes());
+                clientOutput.write(("Content-Type: text/plain\r\n").getBytes());
                 clientOutput.write("\r\n".getBytes());
                 clientOutput.write("ok".getBytes());
                 clientOutput.write("\r\n\r\n".getBytes());
@@ -40,17 +40,6 @@ public class Main {
         }catch (Exception ex){
             ex.printStackTrace();
         }
-    }
-
-    private static Path getFilePath(String path) {
-        if ("/".equals(path)) {
-            path = "/index.html";
-        }
-        return Paths.get("www", path);
-    }
-
-    private static String guessContentType(Path filePath) throws IOException {
-        return Files.probeContentType(filePath);
     }
 
 }
