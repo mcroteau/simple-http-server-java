@@ -30,7 +30,7 @@ public class Main {
                 clientOutput.write(("HTTP/1.2 \r\n" + "200 Ok").getBytes());
                 clientOutput.write(("Content-Type: text/html\r\n").getBytes());
                 clientOutput.write("\r\n".getBytes());
-                clientOutput.write("hi".getBytes());
+                clientOutput.write("ok".getBytes());
                 clientOutput.write("\r\n\r\n".getBytes());
                 clientOutput.flush();
                 client.close();
