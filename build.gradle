@@ -1,0 +1,15 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'foo'
+version '1.0'
+
+application{
+    mainClass.set("Main")
+}
+
+repositories {
+    mavenCentral()
+}
