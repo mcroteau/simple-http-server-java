@@ -1,5 +1,5 @@
 Do you feel alone?
-Are you pondering lifes questions?
+Are you pondering life's questions?
 Look no further... a simple solution!
 
 Orange Mocha Frappuccinos! 
